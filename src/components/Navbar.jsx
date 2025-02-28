@@ -6,6 +6,7 @@ import Flex from "./Flex";
 import Image from "./Image";
 import Logo from "../assets/Logo.png";
 import User from "./User";
+import Cart from "./Cart";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,6 +64,7 @@ const Navbar = () => {
                 3
               </span>
             </div>
+            {/* <Cart/> */}
             <User/>
           </div>
 

@@ -10,7 +10,7 @@ const ProductDetails = () => {
   let productId = useParams();
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/${productId.id}`) // 1 নম্বর প্রোডাক্ট ডাইনামিক ভাবে লোড হবে
+    fetch(`https://dummyjson.com/products/${productId.id}`) 
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
