@@ -1,8 +1,8 @@
 import React from "react";
 const About = () => {
   // Dynamic Images
-  const aboutImage = "https://picsum.photos/500/400"; 
-  const teamImages = [
+  let aboutImage = "https://picsum.photos/500/400"; 
+  let teamImages = [
     {
       name: "John Doe",
       role: "Founder & CEO",

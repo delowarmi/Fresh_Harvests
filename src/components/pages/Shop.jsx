@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import Product from "../Product";
 
 const Shop = () => {
-  const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [priceRange, setPriceRange] = useState(20000);
-  const [category, setCategory] = useState("all");
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12; // 
+  let [products, setProducts] = useState([]);
+  let [filteredProducts, setFilteredProducts] = useState([]);
+  let [searchTerm, setSearchTerm] = useState("");
+  let [priceRange, setPriceRange] = useState(20000);
+  let [category, setCategory] = useState("all");
+  let [currentPage, setCurrentPage] = useState(1);
+  let itemsPerPage = 12; // 
 
   useEffect(() => {
     fetch("https://dummyjson.com/products?limit=0") // 
@@ -32,10 +32,10 @@ const Shop = () => {
   }, [searchTerm, priceRange, category, products]);
 
   // Pagination Logic
-  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-  const indexOfLastProduct = currentPage * itemsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
-  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  let totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  let indexOfLastProduct = currentPage * itemsPerPage;
+  let indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
+  let currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   return (
     <div className="bg-white pt-24">
@@ -71,8 +71,27 @@ const Shop = () => {
             <option value="smartphones">Smartphones</option>
             <option value="laptops">Laptops</option>
             <option value="fragrances">Fragrances</option>
-            <option value="beauty">beauty</option>
+            <option value="beauty">Beauty</option>
             <option value="groceries">Groceries</option>
+            <option value="vehicle">Vehicle</option>
+            <option value="furniture">Furniture</option>
+            <option value="home-decoration">Home-Decoration</option>
+            <option value="kitchen-accessories">Kitchen-Accessories</option>
+            <option value="mens-shirts">Men's-Shirts</option>
+            <option value="mens-shoes">Mens-Shoes</option>
+            <option value="mens-watches">Mens-Watches</option>
+            <option value="mobile-accessories">Mobile-Accessories</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="skin-care">Skin-Care</option>
+            <option value="sports-accessories">Sports-Accessories</option>
+            <option value="sunglasses">Sunglasses</option>
+            <option value="tablets">Tablets</option>
+            <option value="tops">Tops</option>
+            <option value="womens-bags">Womens-Bags</option>
+            <option value="womens-dresses">Womens-Dresses</option>
+            <option value="womens-jewellery">Womens-Jewellery</option>
+            <option value="womens-shoes">Womens-Shoes</option>
+            <option value="womens-watches">Womens-Watches</option>
           </select>
         </div>
 

@@ -6,12 +6,12 @@ import { FaFacebookF } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 
 const User = () => {
-    const [hidden, setHidden] = useState(false);
-    const [scrollChange, setScrollChange] = useState(false);
-    const [isLogin, setIsLogin] = useState(true);
+    let [hidden, setHidden] = useState(false);
+    let [scrollChange, setScrollChange] = useState(false);
+    let [isLogin, setIsLogin] = useState(true);
 
     useEffect(() => {
-        const handleScroll = () => {
+        let handleScroll = () => {
             setScrollChange(window.scrollY > 1000);
         };
 

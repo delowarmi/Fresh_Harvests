@@ -4,9 +4,9 @@ import { FiHeart } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
-  const [product, setProduct] = useState(null);
-  const [quantity, setQuantity] = useState(1);
-  const [mainImage, setMainImage] = useState("");
+  let [product, setProduct] = useState(null);
+  let [quantity, setQuantity] = useState(1);
+  let [mainImage, setMainImage] = useState("");
   let productId = useParams();
 
   useEffect(() => {
@@ -18,8 +18,8 @@ const ProductDetails = () => {
       });
   }, [productId]);
 
-  const handleIncrement = () => setQuantity((prev) => prev + 1);
-  const handleDecrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  let handleIncrement = () => setQuantity((prev) => prev + 1);
+  let handleDecrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
     <div className="bg-white pt-24">
@@ -135,7 +135,7 @@ const ProductDetails = () => {
 
 // Related Products Component
 const RelatedProduct = ({ id }) => {
-  const [product, setProduct] = useState(null);
+  let [product, setProduct] = useState(null);
 
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${id}`)

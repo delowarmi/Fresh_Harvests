@@ -6,7 +6,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 const Loging = () => {
 
-const [hidden, setHidden] = useState(false);
+let [hidden, setHidden] = useState(false);
   return (
     <div className='w-full relative'>
         <OutsideClickHandler onOutsideClick ={() => { setHidden(false); }} >
